@@ -402,7 +402,12 @@
         "</blockquote>";
       //elementoIntro.offset().top = 0;
       //document.scrollTo(0, 0);
-      const nomeDaPessoa = document.querySelector(".nome");
+      const nomeDaPessoa = document.querySelectorAll(".nome");
+      for (let i = 0; i < nomeDaPessoa.length; i++) {
+        nomeDaPessoa[i].innerText = nome.trim().toUpperCase();
+}
+
+      //nomeDaPessoa.innerText = nome.trim().toUpperCase();
       nomeDaPessoa.innerText = nome.trim().toUpperCase();
       const linguagemDaPessoa = document.querySelector(".linguagem");
       linguagemDaPessoa.innerText = linguagem.trim().toUpperCase();
