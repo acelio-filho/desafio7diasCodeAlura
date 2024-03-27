@@ -236,9 +236,6 @@
     </nav>
     <main>
       <section id="intro"></section>
-        
-        
-        <inputt type="number" steps="1" min="1" max="2"></inputt>
       <section id="capacidades">
         <h3>CAPACIDADES</h3>
         <br />
@@ -418,10 +415,10 @@
       function retornaFrase(){
         const simOuNaoElement = document.getElementById('simOuNao');
         const respostaElement = document.getElementById('resposta');
-        simOuNaoElement.blur();document.scrollTo(0,150);
+        simOuNaoElement.blur();
         if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";}
       if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";}
-      }
+      respostaElement.focus()}
     </script>
   </body>
 </html>
