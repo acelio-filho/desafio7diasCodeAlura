@@ -418,7 +418,7 @@
       function retornaFrase(){
         const simOuNaoElement = document.getElementById('simOuNao');
         const respostaElement = document.getElementById('resposta');
-        simOuNaoElement.blur().style.top=150;
+        simOuNaoElement.blur();document.scrollTo(0,150);
         if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";}
       if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";}
       }
