@@ -181,7 +181,7 @@
                   .fonte_escrita{font-family:Salsa, cursive;}
                   header .nome,.linguagem{width:fit-content;background-color:#999;color:black;padding:6px 12px;border-radius:6px;
                     }
-                  header .nome{padding-bottom:5px;}
+                  .nome{padding-bottom:5px;}
                   .linguagem{padding-top:2px;
                   }
                   figure:fullscreen{background-color:var(--corFundo);padding:2%;display:flex;align-items:center;justify-content:center;}
@@ -225,7 +225,7 @@
       <br />
     </header>
     <br />
-      <label style="text-align:center"><h2 class="fonte_escrita"><span>Rafaela</span>, você gosta de estudar <span id="qualLinguagem">javascript</span>?</h2>
+      <label style="text-align:center" id="labelInputNumber"><h2 class="fonte_escrita"><span class="nome">Rafaela</span>, você gosta de estudar <span id="qualLinguagem">javascript</span>?</h2>
         <br><p>Responda com o número 1 para SIM ou 2 para NÃO<br />
         <input id="simOuNao" type="number" max="2" min="1" size="2" step="1" value="0" onchange="retornaFrase();"></p></label>
         <br/><h3 id="resposta" class="fonte_escrita" align="center"></h3>
@@ -236,6 +236,7 @@
     </nav>
     <main>
       <section id="intro"></section>
+        
       <section id="capacidades">
         <h3>CAPACIDADES</h3>
         <br />
@@ -404,22 +405,22 @@
         nomeDaPessoa[i].innerText = nome.trim().toUpperCase();
 }
 
+      //nomeDaPessoa.innerText = nome.trim().toUpperCase();
       const linguagemDaPessoa = document.querySelector(".linguagem");
       linguagemDaPessoa.innerText = linguagem.trim().toUpperCase();
       qualLinguagem.innerText = linguagem.trim().toUpperCase();
-      
+
       function getLinguagem(){return linguagem.toUpperCase();}
-    
-      //pergunta sobre estar gostando
+      //document.getElementById("intro").focus();
+      //voce entendeu a pergunta?
+    //pergunta sobre estar gostando
     
       function retornaFrase(){
         const simOuNaoElement = document.getElementById('simOuNao');
         const respostaElement = document.getElementById('resposta');
-        simOuNaoElement.blur();
-        if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";}
-      if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";}
+        if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";simOuNaoElement.blur();}
+      if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";simOuNaoElement.blur();}
       respostaElement.focus();
-      window.scrollTo(0,(labelInputNumber.offsetTop-50));}
-    </script>
+      window.scrollTo(0,(labelInputNumber.offsetTop-50));}</script>
   </body>
 </html>
