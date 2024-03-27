@@ -407,8 +407,6 @@
         nomeDaPessoa[i].innerText = nome.trim().toUpperCase();
 }
 
-      //nomeDaPessoa.innerText = nome.trim().toUpperCase();
-      nomeDaPessoa.innerText = nome.trim().toUpperCase();
       const linguagemDaPessoa = document.querySelector(".linguagem");
       linguagemDaPessoa.innerText = linguagem.trim().toUpperCase();
       qualLinguagem.innerText = linguagem.trim().toUpperCase();
@@ -421,8 +419,8 @@
       function retornaFrase(){
         const simOuNaoElement = document.getElementById('simOuNao');
         const respostaElement = document.getElementById('resposta');
-        if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";simOuNaoElement.blur();respostaElement.focus();}
-      if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";simOuNaoElement.blur();respostaElement.focus();}
+        if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";simOuNaoElement.blur().offset().top = 50;}
+      if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";simOuNaoElement.blur().offset().top = 50;}
       respostaElement.focus();}</script>
   </body>
 </html>
