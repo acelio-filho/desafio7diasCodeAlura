@@ -418,8 +418,9 @@
       function retornaFrase(){
         const simOuNaoElement = document.getElementById('simOuNao');
         const respostaElement = document.getElementById('resposta');
-        if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";simOuNaoElement.blur().offset().top=50;}
-      if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";simOuNaoElement.blur().offset().top=50;}
+        simOuNaoElement.blur().offset().top=50;
+        if(simOuNaoElement.value==="1"){respostaElement.innerText="Muito bom! Continue estudando e você terá muito sucesso.";}
+      if(simOuNaoElement.value==="2"){respostaElement.innerText="Ahh que pena... Já tentou aprender outras linguagens?";}
     </script>
   </body>
 </html>
